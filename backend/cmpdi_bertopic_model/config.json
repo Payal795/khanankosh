@@ -1,0 +1,69 @@
+{
+  "calculate_probabilities": false,
+  "language": null,
+  "low_memory": false,
+  "min_topic_size": 10,
+  "n_gram_range": [
+    1,
+    1
+  ],
+  "nr_topics": null,
+  "seed_topic_list": [
+    [
+      "borehole",
+      "stratigraphy",
+      "lithology",
+      "seam thickness",
+      "fault line",
+      "shale parting",
+      "sandstone"
+    ],
+    [
+      "coking coal",
+      "ash content",
+      "useful heat value",
+      "gcv",
+      "moisture grade",
+      "volatile matter",
+      "washability"
+    ],
+    [
+      "overburden",
+      "dragline",
+      "opencast",
+      "stripping ratio",
+      "excavator haulage",
+      "bench height",
+      "dump slope"
+    ],
+    [
+      "water seepage",
+      "aquifer ingress",
+      "dewatering",
+      "highwall slope",
+      "strata control",
+      "inundation"
+    ],
+    [
+      "environmental clearance",
+      "forest diversion",
+      "land acquisition",
+      "reclamation",
+      "compensatory afforestation",
+      "parivesh"
+    ],
+    [
+      "khanan prahari",
+      "illegal mining",
+      "surveillance",
+      "action taken report",
+      "nodal officer",
+      "parliamentary question",
+      "geo fenced"
+    ]
+  ],
+  "top_n_words": 10,
+  "verbose": true,
+  "zeroshot_min_similarity": 0.7,
+  "zeroshot_topic_list": null
+}

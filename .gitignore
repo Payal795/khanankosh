@@ -1,0 +1,38 @@
+# Environment files and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python environments and generated files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+**/.deepeval/
+
+# Generated backend databases and report work files
+backend/chroma_db/
+backend/tables.db
+backend/tables.db-journal
+backend/tables.db-wal
+backend/tables.db-shm
+backend/work/
+
+# Frontend dependencies and build output
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+frontend/.env.*.local
+
+# Generated evaluation and human-review output
+evals/runs/latest.json
+evals/human_review_queue.json
+evals/human_decisions.json
+evals/prompt_review_dataset.json
+
+# OS files
+.DS_Store
+Thumbs.db

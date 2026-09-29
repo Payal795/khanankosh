@@ -1,0 +1,333 @@
+[
+  {
+    "type": "paragraph",
+    "query": {
+      "text": "The Kuju block lies in the West Bokaro coalfield and is easy to reach by road and rail. A highway and a railway station are close to the mine, and new railway stations are also being planned nearby.",
+      "context": {
+        "heading1": "Detailed Project Report for Kuju OCP (1.30 MTY), CCL, Chapter III - Project Site Information, section 3.2 Accessibility and Communication.",
+        "heading2": null,
+        "heading3": null,
+        "heading4": null
+      },
+      "user_topic": "Location and accessibility of Kuju OCP",
+      "user_description": "Rewrite the paragraph with the exact district and state, the national highway, the nearest railway station with its distance from the block, and the new railway line and stations under construction."
+    },
+    "ideal_answer": "The Kuju Block lies in Ramgarh district, Jharkhand, in the West Bokaro coalfield. National Highway No. 33 passes through the western part of the Block, and the nearest railway station is Ranchi Road, on the Gomoh-Barkakana loop line, about 12 km from the Block. The Koderma-Hazaribagh railway line is under construction along the NH-33 alignment, and two new stations, Kuju and Mandu, are coming up about 2-3 km and 3-4 km from the mine respectively."
+  },
+  {
+    "type": "paragraph",
+    "query": {
+      "text": "This report is needed because the existing underground mine is not doing well financially. Opencast mining will raise output a lot, improve recovery and help meet the growing demand for power-grade coal.",
+      "context": {
+        "heading1": "Detailed Project Report for Kuju OCP (1.30 MTY), CCL, Chapter I - Introduction, section 1.3 Justification of Preparation of Detailed Project Report.",
+        "heading2": null,
+        "heading3": null,
+        "heading4": null
+      },
+      "user_topic": "Justification for preparing the Kuju OCP Detailed Project Report",
+      "user_description": "Rewrite with the specific output increase (from present level to 1.30 MTY), the reasons for moving from underground to opencast, and the safety barrier proposed for NH-33."
+    },
+    "ideal_answer": "This report is justified because the existing underground mine is incurring heavy losses, and converting to opencast mining will raise production from 0.057 MTY to 1.30 MTY, increase the recovery/percentage of extraction, and help meet the growing demand for power-grade coal, while a 100 m barrier is maintained from NH-33 for safety."
+  },
+  {
+    "type": "paragraph",
+    "query": {
+      "text": "The block has several coal-bearing formations. The Barakar formation is the main one and has many seams. The other formations are less important, and no igneous intrusions have been found.",
+      "context": {
+        "heading1": "Detailed Project Report for Kuju OCP (1.30 MTY), CCL, Chapter IV - Geology and Deposit Appraisal, section 4.1.7 Brief geological setting within the block.",
+        "heading2": null,
+        "heading3": null,
+        "heading4": null
+      },
+      "user_topic": "Geological setting of Kuju block",
+      "user_description": "Rewrite with the thickness and number of correlatable seams in the Barakar formation, the Karharbari formation and its only seam, the Barren Measures thickness and rock types, and the observation on burnt outcrops."
+    },
+    "ideal_answer": "The Barakar formation is more than 450 m thick in the block and is the major coal-bearing formation, containing 24 correlatable coal seams. The Karharbari formation contains only one seam, Seam-0, and is about 72 m thick, developed in the north-eastern part of the Mourpa section. The Barren Measures formation, about 150 m thick, consists of grey shales and carbonaceous sandy shales with sideritic bands. Burnt outcrops are noticed in all three sections of the block, along Seam X near Banderchua nala and in the overlying Seam XI, and no igneous intrusions have been recorded in any borehole or mine working."
+  },
+  {
+    "type": "paragraph",
+    "query": {
+      "text": "The quarry boundaries have been fixed keeping safe distances from nearby streams and the highway so that the surface features stay protected while as much coal as possible is recovered.",
+      "context": {
+        "heading1": "Detailed Project Report for Kuju OCP (1.30 MTY), CCL, Chapter V - Mine Boundary, Reserves and Mine Life, section 5.2 Mine Boundaries.",
+        "heading2": null,
+        "heading3": null,
+        "heading4": null
+      },
+      "user_topic": "Mine boundaries of Kuju OCP",
+      "user_description": "Rewrite giving the northern, southern, eastern and western surface boundaries with the exact barrier distances and the features they are measured from."
+    },
+    "ideal_answer": "The northern surface boundary is fixed 60 m from Chowtha nala, the southern boundary is fixed at the leasehold (metamorphic) line of Kuju Block, the eastern boundary leaves a 60 m barrier from Bander Chua nala, and the western boundary is fixed 100 m from the new diverted NH-33."
+  },
+  {
+    "type": "paragraph",
+    "query": {
+      "text": "A shovel and dumper system with drilling and blasting was selected because it suits the mine conditions. Other mining technologies were not considered suitable. Because of the steep dip, waste is dumped outside the pit.",
+      "context": {
+        "heading1": "Detailed Project Report for Kuju OCP (1.30 MTY), CCL, Chapter VI - Method of Mining, section 6.4 Choice of Technology, and Chapter I section 1.4 Difficulties and constraints.",
+        "heading2": null,
+        "heading3": null,
+        "heading4": null
+      },
+      "user_topic": "Choice of mining technology and dumping for Kuju OCP",
+      "user_description": "Rewrite with the geo-mining reasons for shovel-dumper combination, the technologies that were ruled out, the seam gradient, why internal dumping is not proposed, and the height of each external dump layer."
+    },
+    "ideal_answer": "Considering the thin seams, steep gradient (10 degrees to 19 degrees), geological disturbances, abandoned old opencast workings, developed galleries and presence of fire, a shovel-dumper combination with drilling and blasting was selected, while Dragline, Bucket Wheel Excavator and Surface Miners were ruled out. Because of the steep gradient, internal dumping is not proposed and overburden is dumped externally, with each dump layer about 30 m high and the dump's top RL kept below 90 m above the surrounding surface."
+  },
+  {
+    "type": "paragraph",
+    "query": {
+      "text": "The project needs a large area of land, part of which is forest land. Families living in the area will have to be rehabilitated, and the company will follow its standard resettlement policy.",
+      "context": {
+        "heading1": "Detailed Project Report for Kuju OCP (1.30 MTY), CCL, Chapter XVI - Environment Management (section 16.7) and Chapter XVII - Land.",
+        "heading2": null,
+        "heading3": null,
+        "heading4": null
+      },
+      "user_topic": "Land requirement and rehabilitation for Kuju OCP",
+      "user_description": "Rewrite with the total land requirement in hectares, its split between forest and non-forest land, the number of project affected families to be rehabilitated, and the policy under which R&R will be carried out."
+    },
+    "ideal_answer": "The project requires a total of 189.95 Ha of land, comprising 27.98 Ha of forest land and 161.97 Ha of non-forest land. About 145 project-affected families are yet to be rehabilitated, and resettlement and rehabilitation will be carried out according to the R&R Policy of Coal India Limited."
+  },
+  {
+    "type": "paragraph",
+    "query": {
+      "text": "The company will look after the environment through an Environment Management Plan and will also support local communities through social welfare activities funded from its earnings.",
+      "context": {
+        "heading1": "Detailed Project Report for Kuju OCP (1.30 MTY), CCL, Chapter XVI - Environment Management, sections 16.4 and 16.6.",
+        "heading2": null,
+        "heading3": null,
+        "heading4": null
+      },
+      "user_topic": "Environment Management Plan and social responsibility for Kuju OCP",
+      "user_description": "Rewrite with the stated objectives of the EMP, the area covered by baseline environmental data, the types of social works undertaken, and the share of retained earnings used to fund them."
+    },
+    "ideal_answer": "The Environmental Management Plan aims to implement environmental control and protection measures, monitor their efficacy, undertake plantation/green-belt development and carry out land restoration, with baseline data covering the core zone and a buffer zone 10 km from its periphery. The company also undertakes social welfare activities such as running primary and secondary schools, dispensaries and hospitals, medical camps, vocational training, and digging wells and bore wells, funded from about 2% of retained earnings under its Company Social Responsibility scheme."
+  },
+  {
+    "type": "table",
+    "query": {
+      "table": {
+        "headers": ["Seam", "Thickness variation (m)", "Net in-situ geological reserve in Kuju block (MT)", "Mineable reserve (MT)"],
+        "rows": [
+          ["XIII", "2.05-3.09", "", ""],
+          ["XII", "", "5.696", ""],
+          ["XI", "6.32-12.75", "", "5.31"],
+          ["X A", "", "", ""],
+          ["X", "", "27.545", ""],
+          ["Total", "", "", ""]
+        ]
+      },
+      "context": {
+        "heading1": "Detailed Project Report for Kuju OCP (1.30 MTY), CCL, Chapter V section 5.5 Seam wise details of Mineable Reserves. The quarry works Seam XIII down to Seam X.",
+        "heading2": null,
+        "heading3": null,
+        "heading4": null
+      },
+      "user_topic": "Seam-wise mineable reserves of Kuju OCP",
+      "user_description": "Complete and verify the table for the five seams proposed to be worked in the quarry, including the total row."
+    },
+    "ideal_answer": {
+      "headers": ["Seam", "Thickness variation (m)", "Net in-situ geological reserve in Kuju block (MT)", "Mineable reserve (MT)"],
+      "rows": [
+        ["XIII", "2.05-3.09", "3.815", "0.27"],
+        ["XII", "2.83-4.38", "5.696", "0.45"],
+        ["XI", "6.32-12.75", "25.512", "5.31"],
+        ["X A", "0.50-1.66", "3.443", "0.45"],
+        ["X", "9.92-12.39", "27.545", "3.12"],
+        ["Total", "-", "66.011", "9.60"]
+      ]
+    }
+  },
+  {
+    "type": "table",
+    "query": {
+      "table": {
+        "headers": ["Particulars", "Forest land (Ha)", "Non-forest land (Ha)", "Total (Ha)"],
+        "rows": [
+          ["Quarry", "22.74", "", ""],
+          ["External OB dump", "", "70.66", ""],
+          ["Infrastructure (workshop, CHP, substation)", "", "", "4.67"],
+          ["Vacant land / proposed green belt", "", "", ""],
+          ["Safety zone", "5.24", "", ""],
+          ["Total area required", "", "", "189.95"]
+        ]
+      },
+      "context": {
+        "heading1": "Detailed Project Report for Kuju OCP (1.30 MTY), CCL, Chapter XVII - Land, Table 17.1 (applies to Option I and Option II).",
+        "heading2": null,
+        "heading3": null,
+        "heading4": null
+      },
+      "user_topic": "Land requirement break-up for Kuju OCP",
+      "user_description": "Fill in the forest, non-forest and total land under each head of the land requirement table."
+    },
+    "ideal_answer": {
+      "headers": ["Particulars", "Forest land (Ha)", "Non-forest land (Ha)", "Total (Ha)"],
+      "rows": [
+        ["Quarry", "22.74", "42.03", "64.77"],
+        ["External OB dump", "0.00", "70.66", "70.66"],
+        ["Infrastructure (workshop, CHP, substation)", "0.00", "4.67", "4.67"],
+        ["Vacant land / proposed green belt", "0.00", "12.72", "12.72"],
+        ["Safety zone", "5.24", "31.89", "37.13"],
+        ["Total area required", "27.98", "161.97", "189.95"]
+      ]
+    }
+  },
+  {
+    "type": "table",
+    "query": {
+      "table": {
+        "headers": ["Particulars", "Option I (Departmental)", "Option II (Outsourcing)"],
+        "rows": [
+          ["Method of coal and OB removal", "", ""],
+          ["Total manpower up to target year", "588", ""],
+          ["Output per manshift (tonnes)", "", ""],
+          ["Cost of production at 100% level (Rs/tonne)", "", ""],
+          ["Cost of production at 85% level (Rs/tonne)", "", ""],
+          ["Break-even production (Mty)", "", ""],
+          ["Total capital requirement up to target year (Rs crores)", "", ""]
+        ]
+      },
+      "context": {
+        "heading1": "Detailed Project Report for Kuju OCP (1.30 MTY), CCL, Summarised Data (Technical and Financial sections) and Chapter XXI - Economics.",
+        "heading2": null,
+        "heading3": null,
+        "heading4": null
+      },
+      "user_topic": "Comparison of Option I and Option II for Kuju OCP",
+      "user_description": "Complete the comparison of the departmental and outsourcing options using the figures in the project report."
+    },
+    "ideal_answer": {
+      "headers": ["Particulars", "Option I (Departmental)", "Option II (Outsourcing)"],
+      "rows": [
+        ["Method of coal and OB removal", "Departmental", "Outsourced"],
+        ["Total manpower up to target year", "588", "234"],
+        ["Output per manshift (tonnes)", "8.37", "21.04"],
+        ["Cost of production at 100% level (Rs/tonne)", "1277.23", "981.17"],
+        ["Cost of production at 85% level (Rs/tonne)", "1423.20", "1045.16"],
+        ["Break-even production (Mty)", "0.77", "0.38"],
+        ["Total capital requirement up to target year (Rs crores)", "175.18", "58.83"]
+      ]
+    }
+  },
+  {
+    "type": "table",
+    "query": {
+      "table": {
+        "headers": ["Year", "Year 1", "Year 2", "Year 3", "Year 4"],
+        "rows": [
+          ["Coal production (Mt)", "0.80", "", "", ""],
+          ["Overburden removal (Mcum)", "", "", "", ""]
+        ]
+      },
+      "context": {
+        "heading1": "Detailed Project Report for Kuju OCP (1.30 MTY), CCL, Summarised Data, Technical section, item 10 Production Phasing. The target production of 1.30 Mt is reached in the 3rd year.",
+        "heading2": null,
+        "heading3": null,
+        "heading4": null
+      },
+      "user_topic": "Production phasing of Kuju OCP",
+      "user_description": "Fill the coal and overburden quantities for each of the first four years."
+    },
+    "ideal_answer": {
+      "headers": ["Year", "Year 1", "Year 2", "Year 3", "Year 4"],
+      "rows": [
+        ["Coal production (Mt)", "0.80", "1.00", "1.30", "1.30"],
+        ["Overburden removal (Mcum)", "2.55", "3.19", "4.15", "4.15"]
+      ]
+    }
+  },
+  {
+    "type": "table",
+    "query": {
+      "table": {
+        "headers": ["Phasing of initial capital (Rs lakhs)", "Total", "1st year", "2nd year", "3rd year"],
+        "rows": [
+          ["Departmental Option I", "17518.00", "", "", ""],
+          ["Outsourcing Option II", "", "", "", ""]
+        ]
+      },
+      "context": {
+        "heading1": "Detailed Project Report for Kuju OCP (1.30 MTY), CCL, Chapter XXI - Economics, section 21.1 Total Capital Investment.",
+        "heading2": null,
+        "heading3": null,
+        "heading4": null
+      },
+      "user_topic": "Phasing of initial capital investment for Kuju OCP",
+      "user_description": "Complete the year-wise phasing of initial capital investment for both options."
+    },
+    "ideal_answer": {
+      "headers": ["Phasing of initial capital (Rs lakhs)", "Total", "1st year", "2nd year", "3rd year"],
+      "rows": [
+        ["Departmental Option I", "17518.00", "11446.68", "3412.02", "2659.29"],
+        ["Outsourcing Option II", "5883.36", "4157.35", "1220.21", "505.80"]
+      ]
+    }
+  },
+  {
+    "type": "qnaagent",
+    "query": "What is the net proved geological reserve of the Kuju block and how large is the block?",
+    "ideal_answer": "The net proved geological coal reserve of the Kuju Block is estimated at 156.553 MT, and the block covers an area of 4.90 sq. km."
+  },
+  {
+    "type": "qnaagent",
+    "query": "What is the total mine life of Kuju OCP and how is it split between the production build-up period and the targeted production period?",
+    "ideal_answer": "The total mine life of Kuju OCP is 8 years, comprising a 2-year production build-up period followed by a 6-year targeted production period."
+  },
+  {
+    "type": "qnaagent",
+    "query": "How much mineable coal, total overburden and average stripping ratio are estimated for the proposed quarry?",
+    "ideal_answer": "The proposed quarry is estimated to have 9.60 MT of mineable coal reserves and 32.95 Mcum of overburden, giving an average stripping ratio of 3.43 cum per tonne."
+  },
+  {
+    "type": "qnaagent",
+    "query": "Compare Option I and Option II of Kuju OCP in terms of total manpower and output per manshift up to the target year.",
+    "ideal_answer": "Under Option I (departmental), total manpower up to the target year is 588 with an output per manshift of 8.37 tonnes. Under Option II (outsourcing), total manpower is 234 with an output per manshift of 21.04 tonnes."
+  },
+  {
+    "type": "qnaagent",
+    "query": "How much land is required for Kuju OCP, and how much of it is forest land?",
+    "ideal_answer": "Kuju OCP requires a total of 189.95 Ha of land under both options, of which 27.98 Ha is forest land and 161.97 Ha is non-forest land."
+  },
+  {
+    "type": "qnaagent",
+    "query": "What is the estimated cost of production per tonne at 100% and 85% production levels for both options?",
+    "ideal_answer": "At 100% production level, the estimated cost of production is Rs. 1277.23/tonne for Option I and Rs. 981.17/tonne for Option II. At 85% production level, it is Rs. 1423.20/tonne for Option I and Rs. 1045.16/tonne for Option II."
+  },
+  {
+    "type": "qnaagent",
+    "query": "What is the break-even production for Option I and Option II?",
+    "ideal_answer": "The break-even production is 0.77 Mty (58.29% of capacity) for Option I and 0.38 Mty (28.94% of capacity) for Option II."
+  },
+  {
+    "type": "qnaagent",
+    "query": "What is the additional capital investment required for Option I and Option II, and what is the completion capital?",
+    "ideal_answer": "The additional capital investment required is Rs. 175.18 crores for Option I and Rs. 58.83 crores for Option II. The expected completion capital is Rs. 199.60 crores for Option I and Rs. 67.65 crores for Option II."
+  },
+  {
+    "type": "qnaagent",
+    "query": "Why was a shovel-dumper combination chosen for Kuju OCP and which other mining technologies were ruled out?",
+    "ideal_answer": "A shovel-dumper combination was chosen because of the thin seams, steep gradient (10 to 19 degrees), geological disturbances, old abandoned opencast workings, developed galleries and presence of fire in the block. Dragline, Bucket Wheel Excavator and Surface Miners were considered and ruled out for this quarry."
+  },
+  {
+    "type": "qnaagent",
+    "query": "How many project affected families need to be rehabilitated and under which policy will R&R be done?",
+    "ideal_answer": "About 145 project-affected families (PAFs) need to be rehabilitated, and resettlement and rehabilitation will be carried out according to the R&R Policy of Coal India Limited."
+  },
+  {
+    "type": "qnaagent",
+    "query": "What are the four surface boundaries of the Kuju OCP quarry and the safety distances kept from the nallas and NH-33?",
+    "ideal_answer": "The northern boundary is fixed 60 m from Chowtha nala, the southern boundary is at the leasehold (metamorphic) line of Kuju Block, the eastern boundary leaves a 60 m barrier from Bander Chua nala, and the western boundary is fixed 100 m from the new diverted NH-33."
+  },
+  {
+    "type": "qnaagent",
+    "query": "How far is the nearest railway station from the Kuju block?",
+    "ideal_answer": "The report gives two different figures for this: the Summarised Data table states the nearest railway station, Ranchi Road, is about 30 km from the project, while Chapter III (Project Site Information) states it is about 12 km away. The report does not reconcile this discrepancy."
+  },
+  {
+    "type": "qnaagent",
+    "query": "Which contractor has been selected for the outsourced coal and overburden removal under Option II?",
+    "ideal_answer": "The report does not name a specific contractor for the outsourced coal and overburden removal under Option II; it only states that Option II uses outsourcing for coal and OB removal, with all other parameters same as Option I."
+  }
+]
