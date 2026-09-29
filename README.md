@@ -238,4 +238,4 @@ The design ensures that organisational documents and AI queries remain within th
 | **Theme** | Smart Automation |
 | **Category** | Software |
 | **Team** | Code_Miners |
-| **Event** | Smart India Hackathon 2026 |
+SIH 2026
