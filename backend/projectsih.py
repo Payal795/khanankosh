@@ -8,19 +8,16 @@ from docx.enum.text import WD_BREAK
 from docx.text.paragraph import Paragraph
 from docx.table import Table
 
-from langchain_ollama import ChatOllama, OllamaEmbeddings
 from langchain_chroma import Chroma
-from sentence_transformers import SentenceTransformer
 from database import TableDatabase
+from model_clients import create_chat_model, create_embeddings
 
 
 # =====================================================================
 # 1. INITIALIZE LLM, VECTOR STORE & SCORER
 # =====================================================================
 
-embeddings = OllamaEmbeddings(
-    model="nomic-embed-text"
-)
+embeddings = create_embeddings()
 
 vectorstore = Chroma(
     collection_name="coal_ministry_docs",
@@ -28,10 +25,7 @@ vectorstore = Chroma(
     persist_directory="./chroma_db"
 )
 
-llm = ChatOllama(
-    model="qwen2.5:7b",
-    temperature=0.0
-)
+llm = create_chat_model()
 
 
 class RetrievalQualityScorer:
@@ -41,7 +35,7 @@ class RetrievalQualityScorer:
     """
 
     def __init__(self, minimum_relevance: float = 0.60):
-        self.encoder = SentenceTransformer("all-MiniLM-L6-v2")
+        self.encoder = create_embeddings()
         self.min_relevance = minimum_relevance
 
     def evaluate_retrieved_context(
@@ -53,8 +47,8 @@ class RetrievalQualityScorer:
         if not retrieved_chunks:
             return False, 0.0
 
-        query_vec = self.encoder.encode(user_query)
-        chunk_vecs = self.encoder.encode(retrieved_chunks)
+        query_vec = np.asarray(self.encoder.embed_query(user_query))
+        chunk_vecs = np.asarray(self.encoder.embed_documents(retrieved_chunks))
 
         scores = np.dot(chunk_vecs, query_vec) / (
             np.linalg.norm(chunk_vecs, axis=1)

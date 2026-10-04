@@ -54,8 +54,8 @@ class DocumentVectorIndexer:
         # Persistent client so projectsih.py's langchain_chroma.Chroma(persist_directory=...) sees it.
         self.chroma_client = chromadb.PersistentClient(path=persist_directory)
         if embedding_fn is None:
-            from langchain_ollama import OllamaEmbeddings   # lazy: only needed when embedding
-            embedding_fn = OllamaEmbeddings(model="nomic-embed-text")
+            from model_clients import create_embeddings
+            embedding_fn = create_embeddings()
         self.embedding_fn = embedding_fn
         self.collection = self.chroma_client.get_or_create_collection(name=collection_name)
 

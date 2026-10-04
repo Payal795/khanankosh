@@ -1,15 +1,10 @@
-import os
-from dotenv import load_dotenv
-
 import chromadb
 from langchain_core.messages import HumanMessage, SystemMessage, ToolMessage
 from langchain_core.tools import tool
-from langchain_ollama import ChatOllama, OllamaEmbeddings
 from database import TableDatabase
+from model_clients import create_chat_model, create_embeddings
 
-load_dotenv()
-
-llm = ChatOllama(model="qwen2.5:7b", temperature=0.0)
+llm = create_chat_model()
 
 @tool
 def query_dynamic_database(question: str) -> str:
@@ -51,7 +46,7 @@ def search_vector_db(query: str) -> str:
     try:
         client = chromadb.PersistentClient(path="./chroma_db")
         coll = client.get_collection("coal_ministry_docs")
-        embed_model = OllamaEmbeddings(model="nomic-embed-text")
+        embed_model = create_embeddings()
 
         res = coll.query(query_embeddings=[embed_model.embed_query(query)], n_results=3)
         docs, metas = res.get("documents", [[]])[0], res.get("metadatas", [[]])[0]
