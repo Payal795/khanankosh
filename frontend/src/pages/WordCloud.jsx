@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Icon } from '../components/Icon';
-
-// Matches the backend uvicorn port in api.py
-const API_BASE = 'http://127.0.0.1:5000';
+import { apiUrl } from './api';
 
 export default function WordCloud() {
   const [words, setWords] = useState([]);
@@ -17,7 +15,7 @@ export default function WordCloud() {
 
   // 1. Fetch word frequencies and generated cloud image concurrently on load
   useEffect(() => {
-    fetch(`${API_BASE}/api/v1/wordcloud`)
+    fetch(apiUrl('/api/v1/wordcloud'))
       .then((res) => {
         if (!res.ok) throw new Error(`Server returned ${res.status}`);
         return res.json();
@@ -33,7 +31,7 @@ export default function WordCloud() {
 
   const fetchCloudImage = () => {
     setImgLoading(true);
-    fetch(`${API_BASE}/api/v1/export-cloud-image`)
+    fetch(apiUrl('/api/v1/export-cloud-image'))
       .then((res) => {
         if (!res.ok) throw new Error(`Server returned ${res.status}`);
         return res.json();
@@ -56,11 +54,11 @@ export default function WordCloud() {
     setLoading(true);
     setFetchStatus(`Querying backend for "${term}"...`);
     
-    console.log(`[DRILL-DOWN] Request URL: ${API_BASE}/api/v1/drill-down?keyword=${encodeURIComponent(term)}&limit=5`);
+    console.log(`[DRILL-DOWN] Request URL: ${apiUrl('/api/v1/drill-down')}?keyword=${encodeURIComponent(term)}&limit=5`);
 
     try {
       const res = await fetch(
-        `${API_BASE}/api/v1/drill-down?keyword=${encodeURIComponent(term)}&limit=5`
+        `${apiUrl('/api/v1/drill-down')}?keyword=${encodeURIComponent(term)}&limit=5`
       );
       
       if (!res.ok) throw new Error(`Server returned HTTP ${res.status}`);

@@ -1,3 +1,4 @@
+import re
 from typing import List
 
 from fastapi import APIRouter, HTTPException
@@ -27,19 +28,22 @@ def format_agent_response(raw_output: str) -> dict:
     its suggested follow-up questions.
     """
 
-    marker = "Suggested Follow-up Questions:"
+    marker = re.search(
+        r"(?im)^[ \t]*(?:#{1,6}[ \t]*)?(?:\*\*|__)?"
+        r"S?uggested Follow[-\u2010-\u2015]up Questions(?::)?(?:\*\*|__)?"
+        r"[ \t]*:?[ \t]*(?:\r?\n|$)",
+        raw_output,
+    )
 
-    if marker in raw_output:
-        answer_part, suggestions_part = raw_output.split(
-            marker,
-            1
-        )
-
-        suggestions = [
-            line.strip(" 0123456789.-*")
-            for line in suggestions_part.strip().split("\n")
-            if line.strip()
-        ]
+    if marker:
+        answer_part = raw_output[:marker.start()]
+        suggestions_part = raw_output[marker.end():]
+        suggestions = []
+        for line in suggestions_part.splitlines():
+            suggestion = re.sub(r"^[ \t]*(?:[-*+]|\d+[.)])[ \t]*", "", line)
+            suggestion = suggestion.strip().strip("*_` ")
+            if suggestion:
+                suggestions.append(suggestion)
     else:
         answer_part = raw_output
         suggestions = []

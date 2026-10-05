@@ -1,9 +1,29 @@
 import React, { useState, useRef, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import { apiUrl } from './api';
 import { 
   Send, Plus, Database, BookOpen, ShieldCheck, Sparkles, ChevronDown, CheckCircle2, FileSearch 
 } from 'lucide-react';
+
+function extractSuggestedFollowups(answer) {
+  const marker = /(?:^|\r?\n)[ \t]*(?:#{1,6}[ \t]*)?(?:\*\*|__)?S?uggested Follow[-\u2010-\u2015]up Questions(?::)?(?:\*\*|__)?[ \t]*:?[ \t]*(?:\r?\n|$)/i;
+  const match = marker.exec(answer);
+  if (!match) return { answer, suggestions: [] };
+
+  const suggestions = answer.slice(match.index + match[0].length)
+    .split(/\r?\n/)
+    .map((line) => line.trim()
+      .replace(/^(?:[-*+]|\d+[.)])\s*/, '')
+      .replace(/^[*_`]+|[*_`]+$/g, '')
+      .trim())
+    .filter(Boolean);
+
+  return {
+    answer: answer.slice(0, match.index).trim(),
+    suggestions
+  };
+}
 
 export default function QAPage() {
   const [messages, setMessages] = useState([
@@ -12,9 +32,9 @@ export default function QAPage() {
       sender: 'agent',
       text: "Welcome to the **खनन Kosh Q&A Agent**. You can query verified geological seam records, statutory production data, environmental clearances, and safety audit protocols across all operational mining regions.",
       suggestions: [
-        "What are the total reserves recorded for G2 and G3 coal grades?",
-        "What are Coal India's main worker safety or training policies?",
-        "Summarize geological constraints and overburden ratios for major blocks"
+        "What are Coal India's main worker safety or training policies",
+        "How does Coal India measure the effectiveness of its safety training programs?",
+        "What specific technologies are being adopted to enhance safety in underground mining operations?"
       ]
     }
   ]);
@@ -36,7 +56,7 @@ export default function QAPage() {
     setLoading(true);
 
     try {
-      const res = await fetch('/api/chat', {
+      const res = await fetch(apiUrl('/api/chat'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query: text })
@@ -47,11 +67,16 @@ export default function QAPage() {
         throw new Error(data.detail || "Backend request failed");
       }
 
+      const rawAnswer = data.answer || data.response || "No records found matching the requested query parameters.";
+      const parsedAnswer = extractSuggestedFollowups(rawAnswer);
+      const suggestions = Array.isArray(data.suggestions)
+        ? data.suggestions.filter((suggestion) => typeof suggestion === 'string' && suggestion.trim())
+        : [];
       const agentMsg = {
         id: Date.now() + 1,
         sender: 'agent',
-        text: data.answer || data.response || "No records found matching the requested query parameters.",
-        suggestions: data.suggestions || []
+        text: parsedAnswer.answer || rawAnswer,
+        suggestions: suggestions.length ? suggestions : parsedAnswer.suggestions
       };
       setMessages((prev) => [...prev, agentMsg]);
     } catch (err) {
@@ -60,7 +85,7 @@ export default function QAPage() {
         {
           id: Date.now() + 1,
           sender: 'agent',
-          text: "⚠️ **Gateway Communication Notice**: Unable to establish connection to intelligence services (`http://localhost:5000`). Please verify your backend server (`uvicorn main:app --reload`) is operational.",
+          text: "⚠️ **Gateway Communication Notice**: Unable to connect to intelligence services. Please try again shortly.",
           suggestions: []
         }
       ]);
@@ -211,11 +236,14 @@ export default function QAPage() {
                           {msg.suggestions.map((sugg, sIdx) => (
                             <button
                               key={sIdx}
+                              type="button"
                               onClick={() => handleSend(sugg)}
+                              disabled={loading}
                               style={{
                                 background: '#E8F0FE', border: '1px solid #BAE6FD', color: '#1A73E8',
                                 borderRadius: '4px', padding: '4px 10px', fontSize: '0.75rem', cursor: 'pointer',
-                                display: 'flex', alignItems: 'center', gap: '5px', transition: 'all 0.15s ease'
+                                display: 'flex', alignItems: 'center', gap: '5px', transition: 'all 0.15s ease',
+                                opacity: loading ? 0.6 : 1
                               }}
                               onMouseOver={(e) => (e.currentTarget.style.background = '#Dbeafe')}
                               onMouseOut={(e) => (e.currentTarget.style.background = '#E8F0FE')}

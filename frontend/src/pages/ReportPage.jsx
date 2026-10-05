@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
 import { Icon } from "../components/Icon";
-
-const API_BASE_URL = "http://localhost:5000/api";
+import { apiUrl } from "./api";
 
 export default function ReportPage() {
   const [file, setFile] = useState(null);
@@ -74,7 +73,7 @@ export default function ReportPage() {
     formData.append("description", description);
 
     try {
-      const response = await fetch(`${API_BASE_URL}/report`, {
+      const response = await fetch(apiUrl("/api/report"), {
         method: "POST",
         body: formData,
       });
@@ -88,7 +87,7 @@ export default function ReportPage() {
 
       const data = await response.json();
       setCurrentStep(4);
-      setDownloadUrl(`${API_BASE_URL}/report/download/${data.job_id}`);
+      setDownloadUrl(apiUrl(`/api/report/download/${data.job_id}`));
     } catch (err) {
       clearInterval(stepInterval);
       setCurrentStep(0);

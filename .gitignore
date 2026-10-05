@@ -14,12 +14,12 @@ __pycache__/
 **/.deepeval/
 
 # Generated backend databases and report work files
-backend/chroma_db/
-backend/tables.db
+
 backend/tables.db-journal
 backend/tables.db-wal
 backend/tables.db-shm
 backend/work/
+
 
 # Frontend dependencies and build output
 frontend/node_modules/

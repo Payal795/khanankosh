@@ -52,6 +52,15 @@ export default function App() {
 
   return (
     <div className="gis-page">
+    <style>{`
+      @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap');
+
+      .mi-condensed {
+        font-family: 'Oswald', 'Arial Narrow', sans-serif;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+      }
+    `}</style>
       <div className="gis-layout">
         <aside className="gis-sidebar">
           <header className="gis-intro">

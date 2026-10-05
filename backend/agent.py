@@ -84,4 +84,4 @@ def run_agent(query: str) -> str:
             tool_output = selected_tool.invoke(call["args"]) if selected_tool else f"Error: Tool '{tool_name}' not recognized."
             messages.append(ToolMessage(content=str(tool_output), name=tool_name, tool_call_id=call["id"]))
 
-    return "Agent reached maximum tool iterations without finishing."
+    return "data not found. Please rephrase your query or ask a different question."
