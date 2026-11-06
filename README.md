@@ -4,7 +4,7 @@
 
 ## Overview
 
-**खनन KOSH** is an AI-powered knowledge and decision-support platform designed to transform heterogeneous organisational data into a unified, searchable and verifiable knowledge system.
+**खनन KOSH** is an AI-powered knowledge and decision-support platform designed to transform heterogeneous organisational data into a unified, searchable and verifiable knowledge systems.
 
 The name reflects its purpose: **“Khanan” (खनन)** represents the mining domain, while **“KOSH”** represents a repository of knowledge.
 
